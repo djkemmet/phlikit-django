@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from landing import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/', include('landing.urls'), name='signup_module'),
     path('', views.index, name="landing_page")
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
