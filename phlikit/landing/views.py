@@ -4,9 +4,14 @@ from .forms import MailinglistSignUpForm
 
 # Create your views here.
 def index(request):
-    return render(request, 'landing/landing_page.html')
+    form = MailinglistSignUpForm()
+    return render(request, 'landing/landing_page.html', {'form': form})
 
 def update_MailinglistSignUp(request):
+
+#
+# This only provides a POST endpoint to add emails to our Mailing List DB
+#
 
     form = MailinglistSignUpForm()
 
@@ -19,5 +24,3 @@ def update_MailinglistSignUp(request):
             return redirect('/signup/')
         else:
             print(form.errors)
-
-    return render(request, 'landing/MailinglistSignUpForm.html', {'form': form})
