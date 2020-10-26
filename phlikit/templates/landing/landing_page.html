@@ -2,7 +2,7 @@
 
 
 {% block content %}
-<div class="jumbotron jumbotron-fluid" style="height:25em; margin:0em; background-image: url('https://negativespace.co/wp-content/uploads/2018/09/negative-space-macbook-desk-office-mouse-work-device-laptop-computer-office-apple-artificial-flowers-business-hasan-albari.jpg'); background-size:cover;">
+<div class="jumbotron jumbotron-fluid" style="height:25em; margin:0em; background-image: url('https://picjumbo.com/wp-content/uploads/digital-nomad-millennial-student-girl-working-remotely-from-cafe_free_stock_photos_picjumbo_HNCK3148-2210x1474.jpg'); background-size:cover;">
     <div class="container center-text">
         <h1 class="display-4" style="color: #FFFFE0">Phlik</h1>
         <p class="lead" style="color: #FFFFE0"> Marketing and Social Media, made simple.</p>
@@ -22,6 +22,21 @@
             <p>
                 Imagine having a marketing team constantly searching for and developing new ways to engage your audience while making their discoveries available for you to use in 
                 a simple to understand interface
+                <form id="MailinglistSignUpForm" method="POST" action="/signup/mailinglist/">
+                    {% csrf_token %}
+                
+                    {% for hidden in form.hidden_fields %}
+                        {{hidden}}
+                    {% endfor %}
+                
+                    {% for field in form.visible_fields%}
+                        {{field.errors}}
+                        {{field.help_text}}
+                        {{field.name}}
+                        {{field}}<br />
+                    {% endfor %}
+                    <input type="submit" name="submit" value="Sign Up!">
+                </form>
             </p>
             
         </div>
@@ -30,6 +45,23 @@
     <div class='row' style="height: 18.2em; background-color: #e3e3e3;">
         <div class="container">
             <h2>Mailing List</h2>
+
+            <form id="MailinglistSignUpForm" method="POST" action="/signup/mailinglist/">
+    {% csrf_token %}
+
+    {% for hidden in form.hidden_fields %}
+        {{hidden}}
+    {% endfor %}
+
+    {% for field in form.visible_fields%}
+        {{field.errors}}
+        {{field.help_text}}
+        {{field.name}}
+        {{field}}<br />
+    {% endfor %}
+    <input type="submit" name="submit" value="Sign Up!">
+</form>
+            
         </div>
 
 
