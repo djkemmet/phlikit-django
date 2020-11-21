@@ -6,7 +6,7 @@ class MailinglistSignUp(models.Model):
     name = models.CharField(max_length=254, help_text="What should we call you?")
 
     class Meta:
-        verbose_name = 'Mailing List Enteries'
+        verbose_name = 'Mailing List Entrie'
 
     def __str__(self):
         return self.email_address
