@@ -1,7 +1,7 @@
 FROM python:alpine3.7
+WORKDIR /phlikit
 COPY . /app
-WORKDIR /app
-run pip3 install flask flask_restful flask_jwt
+run pip3 install django
 EXPOSE 8080
 ENTRYPOINT [ "python" ]
 CMD [ "app.py"  ]
