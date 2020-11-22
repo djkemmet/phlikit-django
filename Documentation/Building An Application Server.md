@@ -13,9 +13,9 @@
 
 </code>
 
-6. chmod +x /etc/init.d/start_poztd
+6. chmod +x /etc/init.d/start_poztd && cd /etc/init.d/ && update-rc.d start_poztd defaults
 7. TODO: Figure out how to make this start on boot
-8. Configure <b>/etc/nginx/sites-available</b> with the following root location in the standard (port 80) server definition:
+8. Configure <b>[/etc/nginx/sites-available](https://mattsegal.dev/nginx-django-reverse-proxy-config.html)</b> with the following root location in the standard (port 80) server definition:
 
 <code>
 
@@ -30,4 +30,6 @@
         }
 
 </code>
-9.
+
+9. After the website is up and running, run through <b>[certbot](https://certbot.eff.org)</b>
+
