@@ -1,5 +1,5 @@
 # Building a Digital Ocean Droplet to Host Our Application
-
+This is a really shitty way to do this. it essentially is still using the built in web server and uses nginx as a secure gateway to the world. There has to be a better way.
 
 ## Prep the Droplet
 1. apt update && apt upgrade
@@ -8,7 +8,8 @@
 4. cd /var/local/ && git clone https://github.com/djkemmet/phlikit-django.git
 
 
-## Configure service to run app on Boot
+## [Configure service to run app on Boot](https://www.howtogeek.com/687970/how-to-run-a-linux-program-at-startup-with-systemd/)
+
 1.nano /usr/local/bin/start_phlikit.sh
 
 <code>
@@ -42,7 +43,6 @@
     WantedBy=multi-user.target
 
 </code>
-<br />
 
 5. chmod 640 /etc/systemd/system/start-phlikit.service
 6. Reload all service defs: systemctl daemon-reload
@@ -50,8 +50,8 @@
 8. reboot and make sure the web app comes online.
 
 
-## Configure nginx to proxy app
-8. Configure <b>[/etc/nginx/sites-available](https://mattsegal.dev/nginx-django-reverse-proxy-config.html)</b> with the following root location in the standard (port 80) server definition:
+## [Configure nginx to proxy app](https://mattsegal.dev/nginx-django-reverse-proxy-config.html)
+8. Configure <b>/etc/nginx/sites-available</b> with the following root location in the standard (port 80) server definition:
 
 <code>
 
