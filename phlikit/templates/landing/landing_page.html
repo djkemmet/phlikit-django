@@ -61,29 +61,34 @@
         </div>
     </div>
         <div class='row' style="height: 18.2em; background-color: #e3e3e3;">
-            <div class="container">
+            <div class="container" style="padding:1em;">
                 <h2>Mailing List</h2>
                 <p>
                     Enter your email address below to stay up to date with development updates and early access
                     to the site.
                 </p>
-
-                <form id="MailinglistSignUpForm" method="POST" action="/signup/mailinglist/">
-                    {% csrf_token %}
-
-                    {% for hidden in form.hidden_fields %}
-                        {{hidden}}
-                    {% endfor %}
-
-                    {% for field in form.visible_fields%}
-                        {{field.errors}}
-                        {{field.help_text}}
-                        {{field.label}}
-                        {{field}}<br />
-                    {% endfor %}
-                    <input type="submit" name="submit" value="Sign Up!">
-                </form>
             </div>
+
+
+
+                    <form id="MailinglistSignUpForm" method="POST" action="/signup/mailinglist/" style="padding:.7em;">
+                        {% csrf_token %}
+
+                        {% for hidden in form.hidden_fields %}
+                            {{hidden}}
+                        {% endfor %}
+
+                        {% for field in form.visible_fields%}
+                            {{field.errors}}
+                            {{field.help_text}}
+                            {{field.label}}
+                            {{field}}<br />
+                        {% endfor %}
+                        <input type="submit" name="submit" value="Sign Up!">
+                    </form>
+
+
+  
 
         </div>
 
