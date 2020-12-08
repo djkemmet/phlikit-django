@@ -1,0 +1,22 @@
+h1{
+   font-size: larger;
+   font-style: oblique;
+}
+div{
+    
+}
+#MailinglistSignUpForm{
+    text-align: center;
+}
+
+p{
+    text-emphasis-style: bold;
+    color: blueviolet;
+}
+#bootstrap-overrides h2{
+    background-position: center;
+}
+#jumbo{
+    text-align: center;
+    color: cadetblue;
+    }
