@@ -23,4 +23,5 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/', include('landing.urls'), name='signup_module'),
+    path('', views.index, name="homepage")
 ]
