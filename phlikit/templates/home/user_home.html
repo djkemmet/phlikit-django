@@ -1,0 +1,41 @@
+{% extends 'landing/base.html'  %}
+
+{% block content  %}
+<div class='container-fluid' style="background-color: grey;">
+    
+    <!-- User welcome -->
+    <div class='row-fluid'  style="background-color: white;">
+       <center>
+            <h1> Welcome, {{ request.user }}</h1>
+       </center>
+    </div>
+
+    <!-- Feature Row 1-->
+    <div class='row' style="background-color: white;">
+    
+        <!-- Shorten Link-->
+        <div class="col" id='feature-column'>
+            <h3>Shorten a link</h3>
+        </div>
+
+        <!-- View Link data-->
+        <div class="col" id='feature-column'>
+            <h3>Feature 2</h3>
+        </div>
+
+        <!-- View Link data-->
+        <div class="col" id='feature-column'>
+            <h3>Feature 2</h3>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}
