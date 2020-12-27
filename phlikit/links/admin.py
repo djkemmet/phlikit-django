@@ -7,7 +7,8 @@ from .models import ShortenedLink
 #
 
 class ShortenedLinkAdmin(admin.ModelAdmin):
-    list_display = ('assigned_user','link','shortened_result')
-    
+    list_display = ('assigned_user', 'shortened_result')
+    #TODO: Change this so that the details of the shortened link come
+    #      through for us to look at and see if we need to do anything. 
 
 admin.site.register(ShortenedLink, ShortenedLinkAdmin)

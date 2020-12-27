@@ -4,4 +4,5 @@ from links import views
 
 urlpatterns = [
     path('shorten/', views.shorten),
+    path('', views.root),    
 ]

@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from landing import views
+from phlikit.views import handle_redirect
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -25,5 +26,6 @@ urlpatterns = [
     path('signup/', include('landing.urls'), name='signup_module'),
     path('home/', include('home.urls'), name='userland_module'),
     path('links/', include('links.urls'), name='link_management'),
-    path('', views.index, name="homepage")
+    path('', views.index, name='homepage'),
+    path('l/<str:url_id>', handle_redirect),
 ]
