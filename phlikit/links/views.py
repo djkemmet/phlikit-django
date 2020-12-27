@@ -27,7 +27,7 @@ def shorten(request):
             # Set It's relevant properties
             shortend_link.link = request.POST['link']
             shortend_link.shortened_result = 'https://poztd.it/l/' + helpers.generate_link_id()
-            shortend_link.assigned_user = request.user.id
+            shortend_link.assigned_user = request.user
             
             # Save the new model to our database
             shortend_link.save()
