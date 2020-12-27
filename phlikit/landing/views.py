@@ -4,8 +4,12 @@ from .forms import MailinglistSignUpForm
 
 # Create your views here.
 def index(request):
-    form = MailinglistSignUpForm()
-    return render(request, 'landing/landing_page.html', {'form': form})
+
+    if request.user.is_authenticated:
+        return redirect('/home/')
+    else:
+        form = MailinglistSignUpForm()
+        return render(request, 'landing/landing_page.html', {'form': form})
 
 def update_MailinglistSignUp(request):
 
