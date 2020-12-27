@@ -1,0 +1,39 @@
+{% extends 'landing/base.html'  %}
+
+{% block content  %}
+<div class='container-fluid'>
+    
+
+    <!-- Feature Row 1-->
+    <div class='row'>
+    
+        <div class='btn-group' role='group' aria-label="feature row">
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Shorten Link</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 2</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 3</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 4</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 5</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 6</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 7</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 8</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 9</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 10</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 11</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 12</button>
+            <button type='button' class='btn btn-secondary' OnClick="parent.location='/links/shorten'" >Quick Feature 13</button>
+
+        </div>
+    </div>
+
+    <div class='row'>
+        <h1>Welcome back, {{request.user }}!</h1><br /><br />
+        <p>Here's what you've missed since you last logged in</p>
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}
