@@ -24,5 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/', include('landing.urls'), name='signup_module'),
     path('home/', include('home.urls'), name='userland_module'),
+    path('links/', include('links.urls'), name='link_management'),
     path('', views.index, name="homepage")
 ]
