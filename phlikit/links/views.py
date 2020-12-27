@@ -41,8 +41,6 @@ def shorten(request):
             # now shortened link.
             return render(request, 'links/shortened_link_result.html', context=view_context)
 
-            #unpack the request to get the link 
-            return redirect('/home/')
 
 
     if request.method == 'GET':
