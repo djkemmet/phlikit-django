@@ -18,7 +18,7 @@ def handle_redirect(request, url_id):
         Instance_of_link_intelligence = LinkIntelligence()
         
         Instance_of_link_intelligence.link_visited = url_id
-        Instance_of_link_intelligence.platform_on = request.META['DESKTOP_SESSION']
+        Instance_of_link_intelligence.platform_on = request.META['HTTP_USER_AGENT']
         Instance_of_link_intelligence.visited_from = request.META['REMOTE_ADDR']
         Instance_of_link_intelligence.date_visited = datetime.now().strftime('%Y-%m-%d %I:%M')
 
