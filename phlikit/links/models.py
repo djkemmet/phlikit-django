@@ -11,3 +11,14 @@ class ShortenedLink(models.Model):
 
     def __str__(self):
         return self.link
+
+class LinkIntelligence(models.Model):
+    link_visited = models.CharField(max_length=128)
+    platform_on = models.CharField(max_length=128)
+    visited_from = models.URLField()
+    date_visited = models.DateTimeField()
+        
+
+    class Meta:
+        verbose_name_plural = 'Click Data'
+
