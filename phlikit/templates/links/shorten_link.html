@@ -1,8 +1,9 @@
 {% extends 'landing/base.html'%}
 
 {% block content %}
+<center>
 
-<h1> Shorten a link {{request.user}}</h1>
+<h1> Shorten new link</h1>
 
 {% if form %}
 
@@ -15,13 +16,13 @@
 
     {% for field in form.visible_fields %}
         {{ field.errors }}
-        {{ field.help_text }}
-        <b>{{field.name}}</b>
         {{ field }}
     {% endfor %}
 
     <input type="submit" name="submit" value="Shorten Link!">
 </form>
+
+</center>
 
 {% endif %}
 
