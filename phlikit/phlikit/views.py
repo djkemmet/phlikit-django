@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
+from datetime import datetime
 
 # So we can work with our shortened links.
 from links.models import ShortenedLink, LinkIntelligence
@@ -19,6 +20,8 @@ def handle_redirect(request, url_id):
         Instance_of_link_intelligence.link_visited = url_id
         Instance_of_link_intelligence.platform_on = request.META['DESKTOP_SESSION']
         Instance_of_link_intelligence.visited_from = request.META['REMOTE_ADDR']
+        Instance_of_link_intelligence.date_visited = datetime.now().strftime('%Y-%m-%d %I:%M')
+
 
 
         # Save this data to the database.

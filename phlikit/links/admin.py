@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ShortenedLink
+from .models import ShortenedLink, LinkIntelligence
 # Register your models here.
 
 #
@@ -12,3 +12,13 @@ class ShortenedLinkAdmin(admin.ModelAdmin):
     #      through for us to look at and see if we need to do anything. 
 
 admin.site.register(ShortenedLink, ShortenedLinkAdmin)
+
+
+
+#
+#
+#
+class LinkIntelligenceAdmin(admin.ModelAdmin):
+    list_display = ('link_visited',)
+
+admin.site.register(LinkIntelligence, LinkIntelligenceAdmin)
