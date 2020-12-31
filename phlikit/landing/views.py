@@ -11,6 +11,8 @@ def index(request):
         form = MailinglistSignUpForm()
         return render(request, 'landing/landing_page.html', {'form': form})
 
+        
+
 def update_MailinglistSignUp(request):
 
 #
