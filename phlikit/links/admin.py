@@ -19,6 +19,6 @@ admin.site.register(ShortenedLink, ShortenedLinkAdmin)
 #
 #
 class LinkIntelligenceAdmin(admin.ModelAdmin):
-    list_display = ('link_visited',)
+    list_display = ('link_visited', 'platform_on', 'date_visited')
 
 admin.site.register(LinkIntelligence, LinkIntelligenceAdmin)
