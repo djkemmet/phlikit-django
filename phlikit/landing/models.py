@@ -8,7 +8,7 @@ class MailinglistSignUp(models.Model):
     uses_facebook = models.BooleanField(default=False)
     uses_twitter = models.BooleanField(default=False)
     uses_instagram = models.BooleanField(default=False)
-    #uses_youtube = models.BooleanField(default=False)
+    uses_youtube = models.BooleanField(default=False)
     uses_parler = models.BooleanField(default=False)
     uses_lbry = models.BooleanField(default=False)
     
